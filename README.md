@@ -4,6 +4,16 @@ Contain the api backend of Tour Of Hero of Angular with NodeJS and MongoDB, with
 
 > Arquetipo de API de NodeJS Generado Automaticamente
 
+## App Deploy in Heroku
+
+https://angular-tourofhero-backapi.herokuapp.com/
+
+>The deploy is automatic from a pipeline.
+
+### Flow of Deploy
+
+![Node Deploy](screenshots/nodedeploy.jpg)
+
 ## Versión
 
 * Angular CLI: 9.0.7
