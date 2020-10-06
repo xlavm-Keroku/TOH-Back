@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const heroSchema = new Schema({
 
-    hid:{type:String},name:{type:String},
+    name:{type:String},
 
 }, {
     collection: 'hero'

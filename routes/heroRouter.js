@@ -46,7 +46,7 @@ heroRouter.route('/update/:id').post((req, res) => {
         } else {
 
 
-            heroInstance .hid=req.body.hid;heroInstance .name=req.body.name;
+            heroInstance .name=req.body.name;
 
 
 

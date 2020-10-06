@@ -38,3 +38,95 @@ Después de generado el arquetipo, desde la ruta de la API se ejecuta `npm insta
 * Usamos el `server.js` para conectarnos a nuestra base de datos MongoDB y seteamos las routes y definimos el puerto donde correrá la app
 * Usamos el archivo de modelo de la entidad `Employee.js` para construir nuestra entidad en la base de datos mongoDB, por medio de mongoose
 * Usamos los routes para crear la lógica del negocio, el CRUD de la API. 
+
+
+-----------------
+
+## API Reference
+
+#### Find-All
+|Endpoint|Method|
+|:--|:--|
+|/hero/|GET|
+
+Sample Response
+```json
+[
+  {
+    "id": 1,
+    "name": "BLACK WIDOW"
+  },
+  {
+    "id": 2,
+    "name": "CAPTAIN AMERICA"
+  }
+]
+```
+
+---
+#### Create
+|Endpoint|Method|
+|:--|:--|
+|/hero/add|POST|
+
+Sample Response
+```json
+{
+    "id": 1,
+    "name": "BLACK WIDOW"
+}
+```
+---
+#### Find
+|Endpoint|Method|
+|:--|:--|
+|/hero/read/:id|GET|
+
+Sample Response
+```json
+{
+    "id": 1,
+    "name": "BLACK WIDOW"
+}
+```
+---
+
+#### Search
+|Endpoint|Method|
+|:--|:--|
+|/hero/search/:name|GET|
+
+Sample Response
+```json
+{
+    "id": 1,
+    "name": "BLACK WIDOW"
+}
+```
+---
+
+#### Update
+|Endpoint|Method|
+|:--|:--|
+|/hero/update/:id|PUT|
+
+Sample Response
+```json
+{
+    "id": 1,
+    "name": "FALCON"
+}
+```
+---
+#### Delete
+|Endpoint|Method|
+|:--|:--|
+|/hero/delete/:id|DELETE|
+
+Sample Response
+```json
+{
+    "id": 1,
+    "name": "BLACK WIDOW"
+}
+```

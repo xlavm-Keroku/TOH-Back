@@ -1,9 +1,9 @@
-
+﻿
 INFORMACIÓN DE LA API
 
 Modelo: hero
 Atributos:
-hid name
+name
 --------------------------------------------
 Ruta Base de la API: hero
 
@@ -16,7 +16,11 @@ url: localhost:3000/hero/
 metodo: get
 
 # FIND: 
-url: localhost:3000/hero/edit/:id
+url: localhost:3000/hero/read/:id
+metodo: get
+
+# FIND: 
+url: localhost:3000/hero/search/:name
 metodo: get
 
 # UPDATE: 
