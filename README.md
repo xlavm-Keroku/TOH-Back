@@ -6,13 +6,13 @@ Contain the api backend of Tour Of Hero of Angular with NodeJS and MongoDB, with
 
 ## App Deploy in Heroku
 
-https://angular-tourofhero-backapi.herokuapp.com/
+https://toh-back-api.herokuapp.com/
 
 >The deploy is automatic from a pipeline.
 
 ### Flow of Deploy
 
-![Node Deploy](screenshots/nodedeploy.jpg)
+![Node Deploy](docs/nodedeploy.jpg)
 
 ## Versión
 
