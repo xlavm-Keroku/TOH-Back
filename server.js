@@ -16,9 +16,8 @@ mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true })
 app.use(bodyParser.json());
 app.use(cors());
 
-//modelos:
-var heroRouter= require('./routes/heroRouter'); 
-app.use('/hero', heroRouter);
+const heroRoutes = require('./routes/hero.route')
+app.use('/hero', heroRoutes)
 
 
 app.listen(port, function() {
