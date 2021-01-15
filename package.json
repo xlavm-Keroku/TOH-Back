@@ -23,7 +23,7 @@
     "cors": "^2.8.4"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4",
+    "nodemon": "^1.18.3",
     "dotenv": "^8.2.0"
   }
 }
