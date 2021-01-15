@@ -14,7 +14,7 @@ https://toh-back-api.herokuapp.com/api/v1/hero/
 
 
 -----------------------
-## Configuration Initial
+## Configuration Initial [Local]
 
 1. Execute command `mongod`
 2. Execute command `mongo`
@@ -27,7 +27,7 @@ PATH_API_HERO = /api/v1/hero
 ```
 
 -----------------------
-## Executing the API 
+## Executing the API [Local]
 1. Execute into the API
     ```
     npm install

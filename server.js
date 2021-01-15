@@ -5,8 +5,6 @@ require("dotenv").config();
 const cors = require('cors')
 
 const port = process.env.PORT
-//const PATH_MONGO = "mongodb+srv://xlavm:0987654321xlavm@heroes-cluster.b2voe.mongodb.net/heroes?retryWrites=true&w=majority"
-//const PATH_API_HERO = "/api/v1/hero"
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false, }),);
