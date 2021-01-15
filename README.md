@@ -4,7 +4,7 @@ Tour of Hero ---- Angular + NodeJS + MongoDB + Express + Mongoose
 
 ## App Deploy in Heroku
 
-https://toh-back-api.herokuapp.com/
+https://toh-back-api.herokuapp.com/api/v1/hero/
 
 >The deploy is automatic from a pipeline.
 
