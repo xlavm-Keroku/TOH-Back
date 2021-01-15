@@ -24,7 +24,8 @@
     "mongoose": "^5.2.15",
     "mysql": "^2.14.1",
     "mysql2": "^1.6.1",
-    "sequelize": "^4.38.0"
+    "sequelize": "^4.38.0",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.3"
