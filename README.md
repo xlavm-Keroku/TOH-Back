@@ -1,8 +1,6 @@
 # Angular-TourOfHeroes-Back
-Contain the api backend of Tour Of Hero of Angular with NodeJS and MongoDB, with Express and Mongoose
+Tour of Hero ---- Angular + NodeJS + MongoDB + Express + Mongoose
 
-
-> Arquetipo de API de NodeJS Generado Automaticamente
 
 ## App Deploy in Heroku
 
@@ -14,37 +12,39 @@ https://toh-back-api.herokuapp.com/
 
 ![Node Deploy](docs/nodedeploy.jpg)
 
-## Versión
 
-* Angular CLI: 9.0.7
-* Node: 12.16.1
-* OS: win32 x64
+-----------------------
+## Configuration Initial
 
-## Configuración Inicial
-Después de generado el arquetipo, desde la ruta de la API se ejecuta `npm install`
+1. Execute command `mongod`
+2. Execute command `mongo`
+3. Execute in the command line of mongo: `use api_db`
+4. Create the `.env` file in the equal route of package.json with this:
+```
+PORT = 3000
+PATH_MONGO = mongodb+srv://xlavm:0987654321xlavm@heroes-cluster.b2voe.mongodb.net/heroes?retryWrites=true&w=majority
+PATH_API_HERO = /api/v1/hero
+```
 
-### Ejecución de Base de Datos MongoDB
-1. ejecuta el mongod 
-2. ejecuta el mongo
-3. ejecuta dentro de mongo: `use nombre_bd`
+-----------------------
+## Executing the API 
+1. Execute into the API
+    ```
+    npm install
+    ```
+2. Next, execute
+    ```
+    npm start
+    ```
+3. Open [http://localhost:3000](http://localhost:3000) in you browser.
 
-### Ejecución del servidor Node JS
-1. desde el cmd nos ubicamos en la ruta del server
-2. digitamos el comando `npm run dev`
-
-
-## Funcionamiento de la API
-### Server Node JS
-* Usamos el `server.js` para conectarnos a nuestra base de datos MongoDB y seteamos las routes y definimos el puerto donde correrá la app
-* Usamos el archivo de modelo de la entidad `Employee.js` para construir nuestra entidad en la base de datos mongoDB, por medio de mongoose
-* Usamos los routes para crear la lógica del negocio, el CRUD de la API. 
 
 
 -----------------
 
 ## API Reference
 
-#### Find-All
+### Find-All
 |Endpoint|Method|
 |:--|:--|
 |/hero/|GET|
@@ -64,7 +64,8 @@ Sample Response
 ```
 
 ---
-#### Create
+
+### Create
 |Endpoint|Method|
 |:--|:--|
 |/hero/add|POST|
@@ -77,7 +78,8 @@ Sample Response
 }
 ```
 ---
-#### Find
+
+### Find
 |Endpoint|Method|
 |:--|:--|
 |/hero/read/:id|GET|
@@ -89,9 +91,10 @@ Sample Response
     "name": "BLACK WIDOW"
 }
 ```
+
 ---
 
-#### Search
+### Search
 |Endpoint|Method|
 |:--|:--|
 |/hero/search/:name|GET|
@@ -103,9 +106,10 @@ Sample Response
     "name": "BLACK WIDOW"
 }
 ```
+
 ---
 
-#### Update
+### Update
 |Endpoint|Method|
 |:--|:--|
 |/hero/update/:id|PUT|
@@ -117,8 +121,10 @@ Sample Response
     "name": "FALCON"
 }
 ```
+
 ---
-#### Delete
+
+### Delete
 |Endpoint|Method|
 |:--|:--|
 |/hero/delete/:id|DELETE|

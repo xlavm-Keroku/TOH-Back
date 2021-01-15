@@ -1,27 +1,24 @@
+const express = require('express')
+const app = express()
+const mongoose = require('mongoose')
+require("dotenv").config();
+const cors = require('cors')
 
-var express = require('express');
-var cors = require('cors');
-var path = require('path');
-var bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-var app = express();
+var port = process.env.PORT
 
-var port = process.env.PORT || 3000;
-const mongoURI = 'mongodb+srv://xlavm:0987654321xlavm@heroes-cluster.b2voe.mongodb.net/heroes?retryWrites=true&w=majority';
+app.use(express.json());
+app.use(express.urlencoded({ extended: false, }),);
+app.use(cors())
 
-mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true })
-.then(() => console.log('MongoDB Connected'))
-.catch(err => console.log(err));
-
-app.use(bodyParser.json());
-app.use(cors());
-
-//modelos:
-var heroRouter= require('./routes/heroRouter'); 
-app.use('/hero', heroRouter);
+mongoose.connect(process.env.PATH_MONGO, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB Connected!'))
+    .catch(err => console.log(err))
 
 
-app.listen(port, function() {
-    console.log('Server is running on port: ' + port);
-})
+app.get('/', (req, res) => {res.send("Welcome to the API Back!")})
 
+
+const heroRoutes = require('./routes/hero.route')
+app.use(process.env.PATH_API_HERO, heroRoutes)
+
+app.listen(port, () => console.log(`Server running in port ${port}`)); 
