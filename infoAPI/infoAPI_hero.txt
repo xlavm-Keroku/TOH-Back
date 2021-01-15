@@ -1,0 +1,33 @@
+﻿
+INFORMACIÓN DE LA API
+
+Modelo: hero
+Atributos:
+name
+--------------------------------------------
+Ruta Base de la API: hero
+
+# CREATE: 
+url: localhost:3000/hero/add
+metodo: post
+
+# FIND-ALL: 
+url: localhost:3000/hero/
+metodo: get
+
+# FIND: 
+url: localhost:3000/hero/read/:id
+metodo: get
+
+# FIND: 
+url: localhost:3000/hero/search/:name
+metodo: get
+
+# UPDATE: 
+url: localhost:3000/hero/update/:id
+metodo: post
+
+# DELETE: 
+url: localhost:3000/hero/delete/:id
+metodo: get
+

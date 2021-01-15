@@ -1,29 +1,32 @@
 {
-  "name": "api-back-toh",
+  "name": "nodejs-mysql-authentication",
   "version": "1.0.0",
-  "description": "this is the api-back-toh",
+  "description": "nodejs login with jwt token",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "test": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "nodejs",
-    "express",
-    "mongodb",
-    "mongoose",
-    "api",
-    "toh"
+    "jwt",
+    "passport",
+    "express"
   ],
-  "author": "Luis Angel Vanegas Martinez",
+  "author": "Arjun Araneta",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^7.4.2",
     "mongodb": "^3.1.6",
     "mongoose": "^5.2.15",
-    "cors": "^2.8.4"
+    "mysql": "^2.14.1",
+    "mysql2": "^1.6.1",
+    "sequelize": "^4.38.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4",
-    "dotenv": "^8.2.0"
+    "nodemon": "^1.18.3"
   }
 }
