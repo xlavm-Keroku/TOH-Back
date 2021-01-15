@@ -1,8 +1,6 @@
 
 var express = require('express');
 var cors = require('cors');
-var path = require('path');
-var bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 var app = express();
 
@@ -13,8 +11,9 @@ mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.log(err));
 
-app.use(bodyParser.json());
-app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false, }),);
+app.use(cors())
 
 const heroRoutes = require('./routes/hero.route')
 app.use('/hero', heroRoutes)
