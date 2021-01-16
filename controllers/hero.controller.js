@@ -71,7 +71,7 @@ exports.findOne = async (req, res) => {
 
 exports.search = async (req, res) => {
     var name = req.params.name;
-    Hero.findOne(name, (err, result) => {
+    Hero.findOne({ 'name': `${name}` }, (err, result) => {
         if (result) {
             res.json(result)
         } else {
