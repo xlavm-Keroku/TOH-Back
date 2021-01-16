@@ -24,8 +24,7 @@ exports.update = async (req, res) => {
             res.json('There is no hero with that ID');
         } else {
 
-            result.client = req.body.client;
-            result.comment = req.body.comment;
+            result.name = req.body.name;
 
             result.save().then(result => {
                 if (result) {
@@ -53,7 +52,7 @@ exports.findAll = async (req, res) => {
         if (result) {
             res.json(result);
         } else {
-            res.json('No heros')
+            res.json('No heroes')
         }
     });
 };
@@ -62,6 +61,17 @@ exports.findAll = async (req, res) => {
 exports.findOne = async (req, res) => {
     var id = req.params.id;
     Hero.findById(id, (err, result) => {
+        if (result) {
+            res.json(result)
+        } else {
+            res.json('The Hero Does Not Exist in the DB')
+        }
+    });
+};
+
+exports.search = async (req, res) => {
+    var name = req.params.name;
+    Hero.findOne(name, (err, result) => {
         if (result) {
             res.json(result)
         } else {

@@ -11,5 +11,6 @@ router.put('/:id', heroController.update);
 router.delete('/:id', heroController.delete);
 router.get('/', heroController.findAll);
 router.get('/:id', heroController.findOne);
+router.get('/search/:name', heroController.search);
 
 module.exports = router

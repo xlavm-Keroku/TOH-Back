@@ -44,10 +44,68 @@ PATH_API_HERO = /api/v1/hero
 
 ## API Reference
 
+
+### Create
+|Endpoint|Method|
+|:--|:--|
+|api/v1/hero/|POST|
+
+Sample Response
+```json
+{
+    "Hero Created Successfully!"
+}
+```
+
+---
+
+### Update
+|Endpoint|Method|
+|:--|:--|
+|api/v1/hero/:id|PUT|
+
+Sample Response
+```json
+{
+    "Hero Update Successfully!"
+}
+```
+
+---
+
+### Delete
+|Endpoint|Method|
+|:--|:--|
+|api/v1/hero/:id|DELETE|
+
+Sample Response
+```json
+{
+    "Hero Remove Successfully!"
+}
+```
+
+---
+
+### Find
+|Endpoint|Method|
+|:--|:--|
+|api/v1/hero/:id|GET|
+
+Sample Response
+```json
+{
+    "id": 1,
+    "name": "BLACK WIDOW"
+}
+```
+
+---
+
 ### Find-All
 |Endpoint|Method|
 |:--|:--|
-|/hero/|GET|
+|api/v1/hero/|GET|
 
 Sample Response
 ```json
@@ -65,69 +123,10 @@ Sample Response
 
 ---
 
-### Create
-|Endpoint|Method|
-|:--|:--|
-|/hero/add|POST|
-
-Sample Response
-```json
-{
-    "id": 1,
-    "name": "BLACK WIDOW"
-}
-```
----
-
-### Find
-|Endpoint|Method|
-|:--|:--|
-|/hero/read/:id|GET|
-
-Sample Response
-```json
-{
-    "id": 1,
-    "name": "BLACK WIDOW"
-}
-```
-
----
-
 ### Search
 |Endpoint|Method|
 |:--|:--|
-|/hero/search/:name|GET|
-
-Sample Response
-```json
-{
-    "id": 1,
-    "name": "BLACK WIDOW"
-}
-```
-
----
-
-### Update
-|Endpoint|Method|
-|:--|:--|
-|/hero/update/:id|PUT|
-
-Sample Response
-```json
-{
-    "id": 1,
-    "name": "FALCON"
-}
-```
-
----
-
-### Delete
-|Endpoint|Method|
-|:--|:--|
-|/hero/delete/:id|DELETE|
+|api/v1/hero/search/:name|GET|
 
 Sample Response
 ```json
