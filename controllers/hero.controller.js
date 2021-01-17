@@ -59,8 +59,7 @@ exports.findAll = async (req, res) => {
 
 
 exports.findOne = async (req, res) => {
-    var id = req.params.id;
-    Hero.findById(id, (err, result) => {
+    Hero.findById(req.params.id, (err, result) => {
         if (result) {
             res.json(result)
         } else {
@@ -70,9 +69,8 @@ exports.findOne = async (req, res) => {
 };
 
 exports.search = async (req, res) => {
-    var name = req.params.name;
-    Hero.findOne({ 'name': `${name}` }, (err, result) => {
-        if (result) {
+    Hero.find({ name : req.params.name },(err, result) => {
+        if (result != "") {
             res.json(result)
         } else {
             res.json('The Hero Does Not Exist in the DB')
