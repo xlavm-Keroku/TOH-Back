@@ -2,7 +2,7 @@
 Tour of Hero ---- Angular + NodeJS + MongoDB + Express + Mongoose
 
 
-## App Deploy in Heroku
+## App Deploy in Heroku 
 
 https://toh-back-api.herokuapp.com/api/v1/hero/
 
